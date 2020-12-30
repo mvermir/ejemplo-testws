@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Test WS') {
             steps {
-                sh "newman run Test-WebServices.postman_collection.json"
+                sh "/usr/local/Cellar/newman/5.2.1/bin/newman run Test-WebServices.postman_collection.json"
             }
         }
     }
