@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "0e6b346b-b8f6-4896-8535-b7b413fe940d",
+		"name": "Test-WebServices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all employees",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "61e16474-1328-4c40-b24c-372112f01092",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){",
+							"    pm.response.to.have.status(200)",
+							"});",
+							"",
+							"pm.test(\"Status is success\", function(){",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.status).to.eql(\"success\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://dummy.restapiexample.com/api/v1/employees",
+					"protocol": "http",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create employees",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7719abb3-d952-4751-8dde-7bfffeac9964",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){",
+							"   pm.response.to.have.status(200); ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://dummy.restapiexample.com/api/v1/create",
+					"protocol": "http",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
