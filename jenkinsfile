@@ -6,7 +6,7 @@ pipeline {
             steps {
              dir('C:\\Users\\mverm\\Documents\\Repositorios\\ejemplo-testws')
              {
-                 newman run Test-WebServices.postman_collection.json
+                 newman run 'Test-WebServices.postman_collection.json'
             }
           }
         }
