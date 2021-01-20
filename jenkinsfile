@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Test WS') {
             steps {
-                "newman run Test-WebServices.postman_collection.json"
+                bat "newman run Test-WebServices.postman_collection.json"
             }
         }
     }
