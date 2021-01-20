@@ -2,10 +2,13 @@ pipeline {
     agent any
 
     stages {
-        stage('Test WS') {
+        stage('Newman') {
             steps {
+             dir('C:\\Users\\mverm\\Documents\\Repositorios\\ejemplo-testws')
+             {
                 bat 'newman run Test-WebServices.postman_collection.json'
             }
+          }
         }
     }
 }
