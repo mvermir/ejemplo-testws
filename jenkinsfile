@@ -6,7 +6,7 @@ pipeline {
             steps {
              dir('C:\\Users\\mverm\\Documents\\Repositorios\\ejemplo-testws')
              {
-                 bat 'newman run -e Test-WebServices.postman_collection.json'
+                 bat './newman.cmd run Test-WebServices.postman_collection.json'
             }
           }
         }
